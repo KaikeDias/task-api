@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - POSTGRES_DB=taskapp
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+    ports:
+      - '5432'
+#  backend:
+#    build:
+#      context: .
+#    container_name: spring-task-api
+#    depends_on:
+#      - postgres
+#    environment:
+#      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/task_api
+#    ports:
+#      - 8080:8080
+#
